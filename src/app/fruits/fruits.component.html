@@ -1,8 +1,19 @@
-
-<h2>{{fruit.name | uppercase}}  Details</h2>
-<div><span>id: </span>{{fruit.id}}</div>
-<div>
-    <label>name:
-      <input [(ngModel)]="fruit.name" placeholder="name"/>
+<ul class="fruits">
+    <li *ngFor="let fruit of fruits">
+      <a routerLink="/detail/{{fruit.id}}">
+        <span class="badge">{{fruit.id}}</span> {{fruit.name}}
+      </a>
+      <button class="delete" title="delete fruit"
+      (click)="delete(fruit)">x</button>
+    </li>
+  </ul>
+  <div>
+    <label>Fruit name:
+      <input #fruitName />
     </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(fruitName.value); fruitName.value=''">
+      add
+    </button>
+   
   </div>

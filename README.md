@@ -1,4 +1,6 @@
-# MyFirstProject
+# Angular review
+
+I didn't upload node modules because of its size, but you can use "npm i" command in your root app directory to install node modules and then "ng serve --open" to launch fruit app!!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
